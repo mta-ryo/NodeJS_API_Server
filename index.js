@@ -27,7 +27,7 @@ app.get('/api/v1/list', (req, rest) =>{
         ];
     
         rest.json(todoList);
-    }, 1000);
+    }, 5000);
 
 });
 
@@ -68,6 +68,22 @@ app.post('/api/v1/done',(req, rest) =>{
 
 });
 
+
+// JSON 返却
+app.get('/api/v1/message/list', (req, rest) =>{
+
+    setTimeout(function(){
+        const todoList =[
+            {id:1, title: '明日の打ち合わの件ですが', detail: '明日の打ち合わの件ですが'},
+            {id:2, title: '健康診断の予約依頼', detail: '健康診断の予約依頼'},
+            {id:3, title: 'メンター面談について', detail: 'メンター面談について'},
+            {id:4, title: '本社ビルの屋上やエレベータ...', detail: '本社ビルの屋上やエレベータ...'},
+        ];
+    
+        rest.json(todoList);
+    }, 1000);
+
+});
 
 
 //ポート3000でサーバを立てる
